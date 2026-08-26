@@ -105,6 +105,48 @@
       box-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
     }
 
+    /* Stile Informativa Privacy e Checkbox */
+    .privacy-box {
+      margin-top: 25px;
+      margin-bottom: 15px;
+      padding: 15px;
+      background-color: #222222;
+      border: 1px solid #333333;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .privacy-text {
+      font-size: 14px;
+      color: #cccccc;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      font-weight: normal;
+    }
+
+    .privacy-checkbox {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .privacy-checkbox input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--gold-primary);
+      cursor: pointer;
+    }
+
+    .privacy-checkbox label {
+      font-size: 15px;
+      color: var(--text-color);
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 0;
+    }
+
     button {
       background-color: var(--gold-primary);
       color: #000000;
@@ -222,6 +264,18 @@
       <div class="form-group">
         <label for="telefono2">Secondo Telefono (Opzionale):</label>
         <input type="tel" id="telefono2" name="Secondo Telefono" placeholder="Altro numero di contatto">
+      </div>
+
+      <!-- Informativa Privacy e Trattamento Dati Personali -->
+      <div class="privacy-box">
+        <p class="privacy-text">
+          Informativa ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR) e del D.Lgs. 196/2003 e s.m.i. 
+          I dati forniti verranno trattati esclusivamente da <strong>Come Oro Food</strong> al fine di gestire ed effettuare la consegna dell'ordine richiesto.
+        </p>
+        <div class="privacy-checkbox">
+          <input type="checkbox" id="privacy" name="Consenso Privacy" value="Accettato" required>
+          <label for="privacy">Dichiaro di aver preso visione dell'Informativa e acconsento al trattamento dei dati personali.*</label>
+        </div>
       </div>
 
       <button type="submit">Invia Dati</button>
