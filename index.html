@@ -67,6 +67,16 @@
       text-align: left;
     }
 
+    /* Griglia per affiancare i tre nuovi campi (Scala, Interno, Piano) */
+    .form-row-3 {
+      display: flex;
+      gap: 12px;
+    }
+
+    .form-row-3 .form-group {
+      flex: 1;
+    }
+
     label {
       display: block;
       margin-bottom: 8px;
@@ -141,6 +151,14 @@
       color: var(--gold-primary);
       font-size: 18px;
     }
+
+    /* Adattamento per schermi piccoli (smartphone) */
+    @media (max-width: 480px) {
+      .form-row-3 {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -152,12 +170,30 @@
 
     <h2>Dati per la Consegna</h2>
     
-    <!-- Modulo collegato a Formspree con il tuo ID -->
+    <!-- Modulo collegato a Formspree -->
     <form action="https://formspree.io/f/xvkpeyjz" method="POST">
       
       <div class="form-group">
         <label for="indirizzo">Indirizzo di Consegna:</label>
         <input type="text" id="indirizzo" name="Indirizzo" placeholder="Via / Piazza e Numero Civico" required>
+      </div>
+
+      <!-- Nuova riga con Scala, Interno e Piano -->
+      <div class="form-row-3">
+        <div class="form-group">
+          <label for="scala">Scala:</label>
+          <input type="text" id="scala" name="Scala" placeholder="Es. A">
+        </div>
+        
+        <div class="form-group">
+          <label for="piano">Piano:</label>
+          <input type="text" id="piano" name="Piano" placeholder="Es. 3°">
+        </div>
+
+        <div class="form-group">
+          <label for="interno">Interno:</label>
+          <input type="text" id="interno" name="Interno" placeholder="Es. 12">
+        </div>
       </div>
 
       <div class="form-group">
