@@ -67,7 +67,7 @@
       text-align: left;
     }
 
-    /* Griglia per affiancare i tre nuovi campi (Scala, Interno, Piano) */
+    /* Griglia per affiancare tre campi (Scala, Interno, Piano) */
     .form-row-3 {
       display: flex;
       gap: 12px;
@@ -178,7 +178,7 @@
         <input type="text" id="indirizzo" name="Indirizzo" placeholder="Via / Piazza e Numero Civico" required>
       </div>
 
-      <!-- Nuova riga con Scala, Interno e Piano -->
+      <!-- Riga con Scala, Piano e Interno -->
       <div class="form-row-3">
         <div class="form-group">
           <label for="scala">Scala:</label>
@@ -212,9 +212,16 @@
         </select>
       </div>
 
+      <!-- Primo Telefono Obbligatorio -->
       <div class="form-group">
-        <label for="telefono">Telefono:</label>
-        <input type="tel" id="telefono" name="Telefono" placeholder="Numero cellulare" required>
+        <label for="telefono">Telefono Principale:</label>
+        <input type="tel" id="telefono" name="Telefono Principale" placeholder="Numero cellulare principale" required>
+      </div>
+
+      <!-- Secondo Telefono Opzionale -->
+      <div class="form-group">
+        <label for="telefono2">Secondo Telefono (Opzionale):</label>
+        <input type="tel" id="telefono2" name="Secondo Telefono" placeholder="Altro numero di contatto">
       </div>
 
       <button type="submit">Invia Dati</button>
