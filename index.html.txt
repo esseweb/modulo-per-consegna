@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo di Consegna - Come Oro Food Style</title>
+  
+  <!-- Importazione del font Bellerose -->
+  <link href="https://fonts.cdnfonts.com/css/bellerose" rel="stylesheet">
+
+  <style>
+    /* Palette Colori Come Oro Food */
+    :root {
+      --bg-color: #1c1c1c;        /* Scuro / Charcoal */
+      --card-bg: #272727;         /* Nero morbido per il modulo */
+      --gold-primary: #d4af37;    /* Oro elegante */
+      --gold-hover: #b8962e;      /* Oro scuro per hover */
+      --text-color: #f4f4f4;      /* Bianco morbido */
+      --input-bg: #141414;        /* Sfondo campi */
+      --border-color: #444444;    /* Bordo sottile */
+    }
+
+    body {
+      font-family: 'Bellerose', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 25px;
+      letter-spacing: 1px;
+    }
+
+    .form-container {
+      background-color: var(--card-bg);
+      padding: 30px;
+      border-radius: 8px;
+      border: 1px solid var(--gold-primary);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      border-bottom: 1px solid var(--gold-primary);
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      color: var(--gold-primary);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      background-color: var(--input-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-color);
+      font-family: 'Bellerose', sans-serif;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    button {
+      background-color: var(--gold-primary);
+      color: #000000;
+      font-weight: bold;
+      padding: 14px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 20px;
+      font-family: 'Bellerose', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: var(--gold-hover);
+    }
+
+    button:active {
+      transform: scale(0.99);
+    }
+
+    select option {
+      background-color: var(--input-bg);
+      color: var(--text-color);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Dati per la Consegna</h2>
+    
+    <!-- Sostituisci ID_FORMSPREE con il tuo codice Formspree -->
+    <form action="https://formspree.io/f/ID_FORMSPREE" method="POST">
+      
+      <div class="form-group">
+        <label for="indirizzo">Indirizzo di Consegna:</label>
+        <input type="text" id="indirizzo" name="Indirizzo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="citofono">Cognome Citofono:</label>
+        <input type="text" id="citofono" name="Cognome Citofono" required>
+      </div>
+
+      <div class="form-group">
+        <label for="specifiche">Specifiche Abitazione:</label>
+        <select id="specifiche" name="Tipo Abitazione" required>
+          <option value="">-- Seleziona un'opzione --</option>
+          <option value="Palazzina / Appartamento">Palazzina / Appartamento</option>
+          <option value="Villa / Casa Indipendente">Villa / Casa Indipendente</option>
+          <option value="Ufficio / Azienda">Ufficio / Azienda</option>
+          <option value="Altro">Altro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="Telefono" required>
+      </div>
+
+      <button type="submit">Invia Dati</button>
+    </form>
+  </div>
+
+</body>
+</html>
